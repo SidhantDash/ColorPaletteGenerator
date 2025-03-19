@@ -1,0 +1,19 @@
+/app/bin
+/app/build
+.gradle/
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Local Gradle settings
+gradle.properties
+
+**/.gradle/
+**/.gradle-cache/
+**/.gradle-local/
+
+**/application.properties

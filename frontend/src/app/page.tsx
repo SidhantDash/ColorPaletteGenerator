@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Hello from "../app/components/Hello";
+import Hello from "./components/Hello";
 import GenerateButton from "./components/GenerateButton";
 import ColorBox from "./components/ColorBox";
 import NavBar from "./components/NavBar";
