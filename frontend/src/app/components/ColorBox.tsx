@@ -4,9 +4,18 @@ interface props {
 
 export default function ColorBox({hexCode}: props) {
 
-    const color = "bg-${hexCode}"
+    const color = hexCode;
+    console.log(color);
     return (
-        <div className="w-8 h-8 bg-${hexCode} text-black">
+        <div>
+            <div>
+                <h1> {color} </h1>
+            </div>
+            <div
+            className="w-48 h-48 text-black border-4 border-black"
+            style={{ backgroundColor: color }}
+            >
+            </div>
         </div>
     );
     

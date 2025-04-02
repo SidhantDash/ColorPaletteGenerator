@@ -16,4 +16,5 @@ gradle.properties
 **/.gradle-cache/
 **/.gradle-local/
 
+
 **/application.properties

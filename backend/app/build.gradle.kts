@@ -42,7 +42,9 @@ dependencies {
     implementation ("org.springframework.security:spring-security-config")
     implementation ("org.springframework.security:spring-security-core")
 
-    implementation("org.projectlombok:lombok:1.18.24")
+    implementation("org.projectlombok:lombok:1.18.36")
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
 
     
 
