@@ -8,7 +8,7 @@ export default function ColorBox({hexCode}: props) {
     console.log(color);
     return (
         <div>
-            <div>
+            <div className="text-white">
                 <h1> {color} </h1>
             </div>
             <div
