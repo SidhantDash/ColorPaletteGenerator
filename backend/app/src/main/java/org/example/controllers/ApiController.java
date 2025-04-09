@@ -13,8 +13,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.example.tables.Users;
+import org.example.models.ColorRequest;
 import org.example.models.LoginRequest;
 import org.example.models.SignupRequest;
+import org.example.services.Color;
 import org.example.repositories.UserRepository;
 
 import java.util.*;
@@ -144,6 +146,11 @@ public class ApiController {
         }
     }
 
+    @GetMapping("/colors")
+    public String getRandomColor() {
+        return Color.generateRandomColor();
+    }
+    
     /**
      * Token generation method for authenticated users.
      * This method creates a JWT (JSON Web Token) that contains user information and
