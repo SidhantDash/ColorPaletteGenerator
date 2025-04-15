@@ -7,11 +7,12 @@ interface props {
 export default function ColorBox({hexCode}: props) {
 
     const color = hexCode;
-    console.log(color);
-    let generated = (color != "");
+    //console.log(color);
+    let generated = (color != ""); // set to true if the string is not empty
 
     return (
         <div>
+            {/* Display the color box and the color as a label if it has been generated */}
             {generated ? (
                 <div>
                     <div className="text-white text-center font-bold">
@@ -22,6 +23,7 @@ export default function ColorBox({hexCode}: props) {
                 </div>
             ) : (
               <div>
+                {/* If not, display the empty symbol in the box */}
                 <div className="text-white text-center font-bold">
                     <h1> Color name </h1>
                 </div>
