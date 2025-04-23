@@ -16,7 +16,7 @@ function randomColor() {
   return color;
 }
 
-async function getPostByHex(color: String) {
+async function getPostByHex(color: string) {
   try {
     const response = await fetch(
       `https://www.thecolorapi.com/scheme?hex=${color}&format=string&mode=monochrome&count=5`,
@@ -62,15 +62,13 @@ export default function Home() {
     <div className="bg-[#1e1e1e] grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <NavBar />
       <ColorScheme scheme={scheme} />
-      <div className="ml-auto mr-auto mt-16 items-center">
         {/* Generate button */}
         <button
-          className="rounded-3xl text-4xl font-bold bg-white text-black px-12 py-4 border-2 border-white mr-5"
+          className="rounded-3xl text-4xl font-bold bg-white hover:bg-[#aaaaaa] text-black px-12 py-4 border-2 border-white mr-5"
           onClick={generateColors}
         >
-          Generate
+          Generate!
         </button>
-      </div>
     </div>
   );
 }

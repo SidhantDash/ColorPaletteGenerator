@@ -1,12 +1,9 @@
 "use client";
-import Image from "next/image";
-import Button from "./Button";
 import ColorBox from "./ColorBox";
-import NavBar from "./NavBar";
-import React, { useState } from "react";
 
 interface Color {
   hex: { value: string };
+  rgb: { value: string, r: number, g:number, b:number };
 }
 
 interface Scheme {
@@ -21,24 +18,23 @@ interface props {
 
 export default function ColorScheme({ scheme }: props) {
   return (
-    <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-      <div className="flex flex-col">
+    <main className="flex flex-col items-center">
+      <div>
         {scheme ? (
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <div className="flex gap-8 items-center">
             {/* Generate five random colors */}
             {scheme?.colors.map((color, index) => (
-              <ColorBox key={index} hexCode={color.hex.value} />
+              <ColorBox key={index} hexCode={color.hex.value} rgbCode={color.rgb.value} red={color.rgb.r} green={color.rgb.g} blue={color.rgb.b} />
             ))}
-                     {" "}
           </div>
         ) : (
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <div className="flex gap-8 items-center">
             {/* When the user has yet to generate anything */}
-            <ColorBox hexCode="" />
-            <ColorBox hexCode="" />
-            <ColorBox hexCode="" />
-            <ColorBox hexCode="" />
-            <ColorBox hexCode="" />
+            <ColorBox hexCode="" rgbCode="" red={0} green={0} blue={0} />
+            <ColorBox hexCode="" rgbCode="" red={0} green={0} blue={0} />
+            <ColorBox hexCode="" rgbCode="" red={0} green={0} blue={0} />
+            <ColorBox hexCode="" rgbCode="" red={0} green={0} blue={0} />
+            <ColorBox hexCode="" rgbCode="" red={0} green={0} blue={0} />
           </div>
         )}
       </div>
